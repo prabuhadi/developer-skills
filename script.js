@@ -134,3 +134,36 @@ console.log(amplitudeBug);
 
 // 1) IDENTIFY
 // min = 0 is the lowest number compare to array
+
+// CODING CHALLANGE TODO
+
+console.log('========== CHALLANGE =========');
+
+// 1) Understanding the problem
+// - Array transformed to string, separated by ...
+// - What is the X days? Answer: index + 1
+
+// 2) Breaking up into sub-problems
+// - Transform array into string
+// - Transform each element to string with °C
+// - Strings needs to contain day (index + 1)
+// - Add ... between elemnts and start and end of string
+// - Log string to console
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+// Example:
+console.log(
+  `... ${data1[0]}°C in 1 days ... ${data1[1]}°C in 2 days ... ${data1[2]}°C in 3 days ...`
+);
+
+const printForecast = function (arr) {
+  // const arr = data1.concat(data2);
+  let str = ''; // for transforming array to string purpose
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i]}°C in ${i + 1} days ... `; // str + str same as str +=
+  }
+  return console.log('... ' + str);
+};
+printForecast(data1);
